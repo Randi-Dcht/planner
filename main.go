@@ -200,5 +200,8 @@ func main() {
 	route.PUT("/planTime", updatePlanTime)
 	route.GET("/planTime/:id", getPlanTimeByUser)
 
-	route.Run(":8080")
+	err = route.Run(":8080")
+	if err != nil {
+		return
+	}
 }
